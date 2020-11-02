@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home page </title>
+  <script src="https://kit.fontawesome.com/0db405f613.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" integrity="sha512-ALoawPS0JxHQ+8dGL7htZIlVNRaE/SN9gHD4G8pJJTi9H4BQ/3PjdvhggSGR34g00mvTPFkxQuveQUsJA5664Q==" crossorigin="anonymous"></script> <!--Howler CDN-->
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+
+  <div id="top">
+    <div id="cameraBar">
+      <div id="camera">
+        <div id="innerGleamOne">
+          <div id="innerGleamTwo"></div>
+        </div>
+      </div>
+      <div id="lightContainer">
+        <div id="redLightOuter" class="outer">
+          <div id="redLightInner" class="inner">
+          </div>
+        </div>
+        <div id="yellowLightOuter" class="outer">
+          <div id="yellowLightInner" class="inner">
+          </div>
+        </div>
+        <div id="greenLightOuter" class="outer">
+          <div id="greenLightInner" class="inner">
+          </div>
+        </div>
+      </div>
+      <div id="name"><span>API Pokedex</span></div>
+    </div>
+
+    <div id="screenSection">
+      <div id="screenBackground">
+        <div id="screen">
+          <img id="img">
+        </div>
+        <div id="screenLight"></div>
+        <div id="speakers"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+
+    <div id="topControls">
+      <div id="topBar">
+        <button id="zoomOut" class="button">-</button>
+        <button id="zoomIn" class="button" >+</button>
+        <button id="shiny" class="button" >Shiny</button>
+        <button id="reverse" class="button"><i class="fas fa-undo"></i></button>
+      </div>
+      <button id="power" class="button" onclick="power()"><i class="fas fa-power-off"></i></button>
+      <button id="openClose" class="button" onclick="opener()">Pad</button>
+    </div>
+
+  </div>
+
+  <div id="under">
+
+    <div id="dataScreen">
+      
+        <div id="data">
+          <span id="dataBody">
+         
+      </span>
+      </div>
+      </p>
+    </div>
+
+    <form action="/data" method="GET" id="underControls">
+      <input type="text" id="searchBox" placeholder="Enter Pokemon name or ID number.." name="searchTerm">
+      <button id="leftArrow" class="button unClick" >&lt</button>
+      <button class="button"><input type="submit" value="Submit" id="submit"></button>
+      <button id="rightArrow" class="button" onclick="start()">&gt</button>
+      <button id="random" class="button" onclick="randomPoke()">Random</button>
+        </form>
+    
+  </div>
+  
+<script>
+  
+  function start(){ 
+  document.getElementById("searchBox").value= 1;
+  }
+
+  function randomPoke(){
+document.getElementById("searchBox").value= Math.floor(Math.random() * 893);
+}
+
+</script>
+ <script type="text/javascript" src="/JS/funcs.js"></script>
+</body>
+
+</html>

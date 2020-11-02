@@ -1,0 +1,503 @@
+
+:root {
+  --inner-grey: #212121;
+  --outer-grey: #171717;
+  --red-base: #cd1030;
+  --outer-trim: #42000b;
+  --control-trim: #960b22;
+  --grey-color: #a1a1a1;
+}
+
+.button {
+  border: 4px solid #171717;
+  background-color: black;
+  letter-spacing: 0.5px;
+  color: grey;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 3px 3px black;
+  font-weight: bold;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button:active {
+  transform: translate(0, 4px); /*, shrinks whole button & contents on click */
+  box-shadow: 0px 0px black;
+}
+
+/* Top section */
+
+#top {
+  width: 400px;
+  height: 600px;
+  border-radius: 5px;
+  z-index: 10;
+  background-color: var(--red-base);
+  border: 4px solid var(--outer-trim);
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: 137.5px 137.5px 137.5px 137.5px;
+  grid-template-areas:
+    "header header header header "
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer ";
+}
+
+#cameraBar {
+  border-bottom: 4px solid var(--outer-trim);
+  grid-area: header;
+  box-sizing: border-box;
+  box-shadow: 0 8px #960b22;
+  display: grid;
+  grid-template-areas:
+    "camera lights top top"
+    "camera one two three"
+    "camera bottom bottom bottom";
+}
+
+#camera {
+  height: 90px;
+  width: 90px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #196a9e;
+  border: 6px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  grid-area: camera;
+}
+
+#innerGleamOne {
+  height: 45px;
+  width: 45px;
+  background-color: #28aafd;
+  border-radius: 50%;
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+
+#innerGleamTwo {
+  height: 20px;
+  width: 20px;
+  background-color: #a1dafe;
+  border-radius: 50%;
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+
+#lightContainer {
+  grid-area: lights;
+  display: grid;
+  grid-template-areas: "red yellow green";
+  margin-left: -20px;
+}
+
+#redLightOuter {
+  background-color: #9a030a;
+  grid-area: red;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-top: 20px;
+  display: inline;
+  float: left;
+  border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: background-color 0.2s ease-out;
+}
+
+#redLightInner {
+  background-color: #e80809;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 1.5px;
+  left: 1.5px;
+  transition: background-color 0.2s ease-out;
+}
+
+#yellowLightOuter {
+  background-color: #81870d;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-top: 20px;
+  grid-area: yellow;
+  border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: background-color 0.2s ease-out;
+}
+
+#yellowLightInner {
+  background-color: #e6ed23;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 1.5px;
+  left: 1.5px;
+  transition: background-color 0.2s ease-out;
+}
+
+#greenLightOuter {
+  background-color: #5b930c;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-top: 20px;
+  grid-area: green;
+  border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: background-color 0.2s ease-out;
+}
+
+#greenLightInner {
+  background-color: #92f318;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 1.5px;
+  left: 1.5px;
+  transition: background-color 0.2s ease-out;
+}
+
+#name {
+  text-align: right;
+  font-size: 24px;
+  grid-area: bottom;
+  color: #4f0303;
+  font-family: "Nunito", sans-serif;
+}
+
+#name span {
+  margin-right: 20px;
+}
+
+#screenSection {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 50px;
+  grid-template-rows: auto;
+  grid-template-areas: ". main main main main main main .";
+  height: 275px;
+}
+
+#screenBackground {
+  grid-area: main;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: var(--grey-color);
+  height: 90%;
+  margin-top: 20px;
+  border-radius: 5px 5px 5px 60px;
+  padding: 0;
+  position: relative;
+}
+
+#screen {
+  max-width: 80%;
+  height: 75%;
+  margin-left: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  margin-right: auto;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden;
+  padding: 0;
+  transition: background-color 0.2s ease-out;
+}
+
+#img {
+  transition: opacity 0.2s ease-out;
+}
+
+.zoomedOut {
+  position: absolute;
+  height: 130px;
+  left: 80px;
+  bottom: 65px;
+}
+
+.normalSize {
+  position: absolute;
+  height: 150px;
+  left: 70px;
+  bottom: 55px;
+}
+
+.zoomedIn {
+  position: absolute;
+  height: 170px;
+  left: 60px;
+  top: 25px;
+}
+
+#screenLight {
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  position: relative;
+  left: 40px;
+  top: 8px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+#speakers {
+  height: 20px;
+  position: absolute;
+  bottom: 7px;
+  left: 234px;
+  width: 20px;
+  -webkit-transform: scale(2, 1);
+  -moz-transform: scale(2, 1);
+  -ms-transform: scale(2, 1);
+  -o-transform: scale(2, 1);
+  transform: scale(6, 2);
+  box-sizing: border-box;
+}
+
+#topControls {
+  display: grid;
+  width: 68%;
+  margin: 10px auto 0;
+  background-color: #b50421;
+  border: 2px solid var(--control-trim);
+  border-radius: 5px;
+  grid-template-areas:
+    "topBar topBar topBar pad"
+    "power power . pad";
+  height: 95px;
+  grid-gap: 5px;
+  padding: 10px 15px 30px 15px;
+}
+
+#topBar {
+  width: 100%;
+  margin: 0 auto 5px;
+  display: grid;
+  grid-template-areas: "zoomOut zoomIn shiny reverse";
+  grid-area: topBar;
+  grid-gap: 7px;
+  height: 40px;
+}
+
+#zoomOut {
+  grid-area: zoomOut;
+  width: 40px;
+  line-height: 26px;
+  font-size: 180%;
+}
+
+#zoomIn {
+  grid-area: zoomIn;
+  width: 40px;
+  line-height: 26px;
+  font-size: 180%;
+}
+
+#shiny {
+  grid-area: shiny;
+}
+
+#reverse {
+  grid-area: reverse;
+}
+
+#power {
+  height: 50px;
+  width: 50px;
+  grid-area: power;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 42px;
+}
+
+/*Power off styling section */
+.fadeOut {
+  opacity: 0;
+  color: black;
+}
+
+.inputOff{
+  color: white;
+}
+
+div#screen.screenOff {
+  background-color: black;
+}
+
+div#redLightInner.lightsOff {
+  background-color: var(--inner-grey);
+}
+
+div#yellowLightInner.lightsOff {
+  background-color: var(--inner-grey);
+}
+
+div#greenLightInner.lightsOff {
+  background-color: var(--inner-grey);
+}
+
+div#redLightOuter.lightsOff {
+  background-color: var(--outer-grey);
+}
+
+div#yellowLightOuter.lightsOff {
+  background-color: var(--outer-grey);
+}
+
+div#greenLightOuter.lightsOff {
+  background-color: var(--outer-grey);
+}
+
+#openClose {
+  grid-area: pad;
+  background-color: #f57e00;
+  color: black;
+}
+
+#under {
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 0px;
+  bottom: 590px;
+  width: 370px;
+  height: 575px;
+  background-color: var(--red-base);
+  transition: 0.5s;
+  z-index: -1;
+  border: 4px solid var(--outer-trim);
+  border-left: 0;
+  box-sizing: border-box;
+}
+
+#dataScreen {
+  height: 60%;
+  width: 80%;
+  border: 2px solid black;
+  margin: 30px auto 10px;
+  box-sizing: border-box;
+  background-color: var(--grey-color);
+  color: white;
+  font-family: "Press Start 2P";
+  border-radius: 5px;
+  padding-top: 12px;
+}
+
+#dataBody{
+  transition: color 0.2s ease-out;
+}
+
+ul {
+ list-style-type:none;
+  margin-left: -39px;
+  margin-top: -16px;
+}
+
+#data {
+  transition: opacity 0.2s ease-out;
+  height: 90%;
+  width: 85%;
+   font-size: 14px; 
+  letter-spacing: 0.5px;
+  margin: auto;
+   background-color: black;
+  padding: 10px;
+  line-height: 30px;
+}
+
+#underControls {
+  width: 80%;
+  height: 145px;
+  background-color: #b50421;
+  border: 2px solid var(--control-trim);
+  box-sizing: border-box;
+  margin: auto;
+  display: grid;
+  grid-area: main;
+  grid-template-areas:
+    "searchBox searchBox searchBox"
+    "leftArrow submit rightArrow"
+    ". random .";
+  grid-gap: 8px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#searchBox {
+  grid-area: searchBox;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #960b22;
+  font-family: "Poppins", sans-serif;
+  padding-left: 6px;
+}
+
+#submit {
+  color: grey;
+  grid-area: search;
+  height: 25px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid black;
+  background-color: black;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+
+input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+#leftArrow {
+  grid-area: leftArrow;
+  line-height: 26px;
+  font-size: 180%;
+}
+
+.unClick{
+  pointer-events: none;
+}
+
+#rightArrow {
+  grid-area: rightArrow;
+  line-height: 26px;
+  font-size: 180%;
+}
+
+#random {
+  grid-area: random;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+#under.slide {
+  left: 408px;
+}
+
+#under.zIndex {
+  z-index: 10;
+}
