@@ -1,6 +1,6 @@
 # API_Pokedex
 
-Fully functioning digital Pokedex built using Node.js, Axios API and [the Pokémon API](https://pokeapi.co/).
+Fully functioning digital Pokedex built using Node.js, Axios API and [the Pokémon API](https://pokeapi.co/). From start to finish, this project took around 2 weeks to complete. 
 
 
 ## Features
